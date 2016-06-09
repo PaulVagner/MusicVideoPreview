@@ -40,7 +40,7 @@ class APIManager {
                         /* .AllowFragments - top level object is not Array or Dictionary.
                         Any type of string or value.   JSONSerialization requires the Do/ Try/ Catch Concerts the NSDATA into a JSON Object and cast it to a Dictionary */
                         
-                        if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? [String: AnyObject] {
+                        if let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as? JSONDictionary {
                             
                             print(json)
                             
