@@ -23,9 +23,9 @@ class Videos {
     private var _vReleaseDte:String
     
     // This variable gets created from the UI
-    var vImageData:NSData?
+    var vImageData: NSData?
     
-    //Make a getter
+    //Makes a getter
     
     var vName: String {
         return _vName
@@ -51,19 +51,19 @@ class Videos {
         return _vVideoUrl
     }
     
-    var vImid:String {
+    var vImid: String {
         return _vImid
     }
     
-    var vGenre:String {
+    var vGenre: String {
         return _vGenre
     }
     
-    var vLinkToiTunes:String {
+    var vLinkToiTunes: String {
         return _vLinkToiTunes
     }
     
-    var vReleaseDte:String {
+    var vReleaseDte: String {
         return _vReleaseDte
     }
     
@@ -75,19 +75,19 @@ class Videos {
         //Return from initializer without initializing all stored properties
         
         
-        // Video name
+        // Video Name
         if let name = data["im:name"] as? JSONDictionary,
             vName = name["label"] as? String {
             self._vName = vName
         } else {
-            //Ymay not always get data back from the JSON -  may want to display message
+            //may not always get data back from the JSON -  may want to display message
             // element in the JSON is unexpected
             
             _vName = ""
         }
         
         
-        // The Studio Name
+        // Video Studio Name
         if let rights = data["rights"] as? JSONDictionary,
             vRights = rights["label"] as? String {
             self._vRights = vRights
@@ -96,8 +96,7 @@ class Videos {
         }
         
         
-        // Price of Video
-        
+        // Video Price
         if let price = data["im:price"] as? JSONDictionary,
             vPrice = price["label"] as? String {
             self._vPrice = vPrice
@@ -107,7 +106,7 @@ class Videos {
         
         
         
-        // The Video Image
+        // Video Image
         if let img = data["im:image"] as? JSONArray,
             image = img[2] as? JSONDictionary,
             immage = image["label"] as? String {
@@ -117,7 +116,7 @@ class Videos {
         }
         
         
-        // The Artist Name
+        // Video Artist Name
         if let artist = data["im:artist"] as? JSONDictionary,
             vArtist = artist["label"] as? String {
             self._vArtist = vArtist
@@ -140,7 +139,7 @@ class Videos {
         
         
         
-        // The Artist ID for iTunes Search API
+        // Video Artist Id
         if let imid = data["id"] as? JSONDictionary,
             vid = imid["attributes"] as? JSONDictionary,
             vImid = vid["im:id"] as? String {
@@ -150,7 +149,7 @@ class Videos {
         }
         
         
-        // The Genre
+        // Video Genre
         if let genre = data["category"] as? JSONDictionary,
             rel2 = genre["attributes"] as? JSONDictionary,
             vGenre = rel2["term"] as? String {
@@ -160,7 +159,7 @@ class Videos {
         }
         
         
-        // Video Link to iTunes
+        // Video iTunes Link
         if let release2 = data["id"] as? JSONDictionary,
             vLinkToiTunes = release2["label"] as? String {
             self._vLinkToiTunes = vLinkToiTunes
@@ -170,7 +169,7 @@ class Videos {
         
         
         
-        // The Release Date
+        // Video Release Date
         if let release2 = data["im:releaseDate"] as? JSONDictionary,
             rel2 = release2["attributes"] as? JSONDictionary,
             vReleaseDte = rel2["label"] as? String {
