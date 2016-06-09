@@ -14,6 +14,7 @@
 		44693BC51D08F0C000E979D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44693BC31D08F0C000E979D6 /* LaunchScreen.storyboard */; };
 		44693BD01D08F0C000E979D6 /* MusicVideoPreviewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44693BCF1D08F0C000E979D6 /* MusicVideoPreviewTests.swift */; };
 		44693BDB1D08F0C000E979D6 /* MusicVideoPreviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44693BDA1D08F0C000E979D6 /* MusicVideoPreviewUITests.swift */; };
+		44693BED1D090BE200E979D6 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44693BEC1D090BE200E979D6 /* APIManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		44693BD61D08F0C000E979D6 /* MusicVideoPreviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicVideoPreviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44693BDA1D08F0C000E979D6 /* MusicVideoPreviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicVideoPreviewUITests.swift; sourceTree = "<group>"; };
 		44693BDC1D08F0C000E979D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44693BEC1D090BE200E979D6 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		44693BE81D08F1AC00E979D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				44693BEC1D090BE200E979D6 /* APIManager.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44693BED1D090BE200E979D6 /* APIManager.swift in Sources */,
 				44693BBD1D08F0C000E979D6 /* ViewController.swift in Sources */,
 				44693BBB1D08F0C000E979D6 /* AppDelegate.swift in Sources */,
 			);
